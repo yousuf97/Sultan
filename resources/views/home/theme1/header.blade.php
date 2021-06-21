@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('home/theme1/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('toastr/toastr.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/theme1/css/custom.css') }}">
+    
 
     @if (Route::currentRouteName() == "media_play")
     <link rel="stylesheet" type="text/css" href="{{ asset('home/theme1/video/css/video-js.css') }}">
@@ -40,8 +41,46 @@
     <script type="text/javascript" src="{{ asset('home/theme1/js/select2.full.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('home/theme1/cropper/cropper.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js" integrity="sha512-KCwrxBJebca0PPOaHELfqGtqkUlFUCuqCnmtydvBSTnJrBirJ55hRG5xcP4R9Rdx9Fz9IF3Yw6Rx40uhuAHR8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+<style>
+        .video1btn {
+            background-color: rgb(0 0 0 / 10%);
+            /* border: 1px solid #fff; */
+            border-radius:50%;
+            color: white;
+            padding: 0.7em;
+            font-size: 16px;
+            cursor: pointer;
+            /* margin-bottom: 2px; */
+        }
+        .video_ul {
+            position: relative !important;
+            top:35% !important;
+            z-index: 1 !important;
+            float: right;
+            list-style: none;
+        }
+        /* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
 
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+    </style>
 <body>
     <!----Loader Start---->
     <div class="ms_loader" id="app_loader">
@@ -70,9 +109,10 @@
                 </div>
                 <div class="ms_nav_wrapper">
                     <ul id="nav">
-                        <li><a href="{{ url('/') }}" title="Discover">
+                        <li><a href="{{ url('/') }}" title="Home">
                                 <span class="nav_icon">
-                                    <span class="icon icon_discover"></span>
+                                    <!-- <span class="icon icon_discover"></span> -->
+                                    <img width="30" style="opacity:0.3" src="{{ asset('home/theme1/images/svg/home.svg') }}" />
                                 </span>
                                 <span class="nav_text">
                                     Home
@@ -80,9 +120,20 @@
                             </a>
                         </li>
 
-                        <li><a href="{{ url('media/list/ballets') }}" title="Stations">
+                        <li><a href="{{ url('media/list/music') }}" title="Music">
+                            <span class="nav_icon">
+                                <!-- <span class="icon icon_music"></span> -->
+                                <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/music.svg') }}" />
+                            </span>
+                            <span class="nav_text">
+                                Music
+                            </span>
+                        </a>
+                    </li>
+                        <li><a href="{{ url('media/list/ballets') }}" title="Ballets">
                                 <span class="nav_icon">
-                                    <span class="icon icon_tracks"></span>
+                                    <!-- <span class="icon icon_tracks"></span> -->
+                                    <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/ballet.svg') }}" />
                                 </span>
                                 <span class="nav_text">
                                     Ballets
@@ -90,18 +141,20 @@
                             </a>
                         </li>
 
-                        <li><a href="{{ url('media/list/pantomime') }}" title="Artists">
+                        <li><a href="{{ url('media/list/pantomime') }}" title="Pantomime">
                                 <span class="nav_icon">
-                                    <span class="icon icon_artists"></span>
+                                    <!-- <span class="icon icon_artists"></span> -->
+                                    <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/pantomime.svg') }}" />
                                 </span>
                                 <span class="nav_text">
                                     Pantomime
                                 </span>
                             </a>
                         </li>
-                        <li><a href="{{ url('media/list/finearts') }}" title="Genres">
+                        <li><a href="{{ url('media/list/finearts') }}" title="Fine Arts">
                                 <span class="nav_icon">
-                                    <span class="icon icon_genres"></span>
+                                    <!-- <span class="icon icon_genres"></span> -->
+                                    <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/fineart.svg') }}" />
                                 </span>
                                 <span class="nav_text">
                                     Fine Arts
@@ -109,22 +162,15 @@
                             </a>
                         </li>
 
-                        <li><a href="{{ url('media/list/music') }}" title="Free Music">
-                            <span class="nav_icon">
-                                <span class="icon icon_music"></span>
-                            </span>
-                            <span class="nav_text">
-                                Musics
-                            </span>
-                        </a>
-                    </li>
+                      
 
                     </ul>
 
                     <ul class="nav_downloads" id="nav_downloads">
-                        <li><a href="{{ url('about/sultan-al-khatib') }}" title="Featured Playlist">
+                        <li><a href="{{ url('about/sultan-al-khatib') }}" title=" Sultan Al Khatib">
                             <span class="nav_icon">
-                                <span class="icon icon_albums"></span>
+                                <!-- <span class="icon icon_albums"></span> -->
+                                <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/about.svg') }}" />
                             </span>
                             <span class="nav_text">
                                Sultan Al Khatib
@@ -138,7 +184,8 @@
                         @auth
                         <li><a href="{{ url('my_account/my_playlist') }}" title="Featured Playlist">
                             <span class="nav_icon">
-                                <span class="icon icon_fe_playlist"></span>
+                                <!-- <span class="icon icon_fe_playlist"></span> -->
+                                <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/playlist.svg') }}" />
                             </span>
                             <span class="nav_text">
                                 my playlist
@@ -149,7 +196,8 @@
 
                             <a href="{{ url('media/list/my_favs') }}" title="Favourites">
                             <span class="nav_icon">
-                                <span class="icon icon_favourite"></span>
+                                <!-- <span class="icon icon_favourite"></span> -->
+                                <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/favorites.svg') }}" />
                             </span>
                             <span class="nav_text">
                                My favourites
@@ -158,7 +206,8 @@
                         </li>
                         <li><a href="{{ url('media/list/my_history') }}" title="History">
                                 <span class="nav_icon">
-                                    <span class="icon icon_history"></span>
+                                    <!-- <span class="icon icon_history"></span> -->
+                                    <img width="30" style="opacity:0.3"  src="{{ asset('home/theme1/images/svg/history.svg') }}" />
                                 </span>
                                 <span class="nav_text">
                                     history
@@ -171,11 +220,8 @@
                 </div>
             </div>
         </div>
-
-        <!---Main Content Start--->
-        <div class="{{$wraper_class}}  @auth ms_profile @endauth">
-            <!---Header--->
-            <div class="ms_header">
+ <!---Header--->
+ <div class="ms_header">
                 <div class="ms_top_left">
                     {!! Form::open(['action' => 'home\HomeController@media_search', 'method' => 'GET', 'id' => 'search_form_h']) !!}
                     <div class="ms_top_search">
@@ -189,10 +235,10 @@
                     </div>
                     {!! Form::close() !!}
 
-                    <div class="ms_top_trend">
+                    <!-- <div class="ms_top_trend">
                         <span><a href="javascript:;" class="ms_color">Winner of the Month :</a></span> <span class="top_marquee"><a
                                 href="{{get_settings_meta_by_termid_metaKey(3,'winner_url')}}">{{get_settings_meta_by_termid_metaKey(3,'winner_title')}}</a></span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="ms_top_right">
 
@@ -225,6 +271,7 @@
                         </div>
                         <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal"
                             data-target="#myModal"><span>register</span></a>
+                            
                         <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal"
                             data-target="#myModal1"><span>login</span></a>
                     </div>
@@ -232,3 +279,35 @@
 
                 </div>
             </div>
+            <!---Banner--->
+            <!-- @if(url()->current()==url('/'))
+            <div class="ms-banner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="ms_banner_img">
+                                <img src="{{ asset('storage/' . get_settings_meta_by_termid_metaKey(1,'banner_img_file')) }}" alt="" class="img-fluid">
+                            </div>
+                            <div class="ms_banner_text">
+                                <h1>{{get_settings_meta_by_termid_metaKey(1,'title1')}}</h1>
+                                <h1 class="ms_color">{{get_settings_meta_by_termid_metaKey(1,'title2')}}</h1>
+                                <p>{{get_settings_meta_by_termid_metaKey(1,'description')}}</p>
+                                <div class="ms_banner_btn">
+                                    <a href="{{ url(get_settings_meta_by_termid_metaKey(1,'btn_1_link')) }}" class="ms_btn">{{get_settings_meta_by_termid_metaKey(1,'btn_1_label')}}</a>
+                                    <a href="{{ url(get_settings_meta_by_termid_metaKey(1,'btn_2_link')) }}" class="ms_btn">{{get_settings_meta_by_termid_metaKey(1,'btn_2_label')}}</a>
+                                </div>
+                            </div> -->
+                            <!-- <div>
+                                <video id="videojs-hls-quality-selector-player" class="" width="640" height="360" controls>
+                                    <source src="{{ asset('storage/1617374438.mp4') }}" type="mp4">
+                                </video>
+                            </div> -->
+                        <!-- </div>
+                    </div>
+                </div>
+            </div>
+            @endif -->
+            
+        <!---Main Content Start--->
+        <div class="{{$wraper_class}}  @auth ms_profile @endauth">
+           

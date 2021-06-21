@@ -342,9 +342,9 @@
                                                     {!! Form::open(['action' => 'admin\SettingsController@save_footer_info', 'method' => 'POST', 'enctype' => 'multipart/form-data', 'id' => 'institution-form']) !!}
                                                     {{ csrf_field() }}
                                                     <div class="card">
-                                                        <div class="card-header">
+                                                        <!-- <div class="card-header">
                                                             <h3 class="card-title">Winner of the Month</h3>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="card-body">
                                                             <div class="form-group">
                                                                 <label>Title*</label>
@@ -579,9 +579,9 @@
                             </div>
                             <div class="tab-pane fade" id="api-other-varibales" role="tabpanel" aria-labelledby="api-other-varibales-tab">
                                 <div class="card card-primary">
-                                    <div class="card-header">
+                                    <!-- <div class="card-header">
                                         <h3 class="card-title">Setup Winner of the month</h3>
-                                    </div>
+                                    </div> -->
                                     <div class="card-body">
                                     </div>
                                     <div class="card-footer">

@@ -12,17 +12,17 @@
                     <h3 class="ms_blog_title">About Sultan Al Khatib</h3>
                     <div class="ms_post_meta">
                         <ul>
-                            <li>May 05,2018 / </li>
-                            <li>12 likes /    </li>
-                            <li>8 comments    </li>
+                            <li>Pianist & Choir Conductor Specialist In History Of Art </li>
+                            
                         </ul>
                     </div>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <p>Sultan Al Khatib is a well-known Pianist & Choir Conductor born in Baghdad in the year 1964. Studied at (Bartók Béla Conservatory) and (Franz Liszt Academy of Music) Budapest / Hungary 1982-1989.
+Khatib is an active presence on the city's cultural scene. Khatib's long, streamlined fingers perform a sort of free-form ballet while he talks. Educated at the Bartok Bela Conservatoire and the Franz Liszt Academy, Budapest, Khatib remembers the stark contrast between the wholly mechanical Russian system under which he learnt in Baghdad and the Kodaly system he now encountered, with its stress on experiencing and articulating the melody - and which was to bring out his personality as a performer.</p>
+                    
                     <blockquote>
-                        Music is composed and performed for many purposes, ranging from aesthetic pleasure, religious or ceremonial purposes, or as an entertainment product for the marketplace.
+                    You go somewhere to give a concert, and you end up staying for the rest of your life - maybe.
                     </blockquote>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+                    
                     <div class="ms_blog_tag foo_sharing">
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -34,7 +34,7 @@
                 </div>
             </div> <br>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="ms_heading">
                         <h1>Sultan's Performance</h1>
@@ -74,7 +74,7 @@
                 @endforeach
 
 
-            </div>
+            </div> -->
 
         </div>
         <div class="col-lg-3 col-md-3">

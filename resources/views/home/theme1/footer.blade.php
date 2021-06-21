@@ -1,5 +1,10 @@
- <!----Footer Start---->
-</div>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+</html>--Footer Start-- -->
+<!-- </div> -->
         <div class="ms_footer_wrapper">
             <div class="ms_footer_logo">
                 <a href="index.html"><img src="{{ asset('storage/' . get_settings_meta_by_termid_metaKey(2,'close_logo')) }}" alt=""></a>
@@ -104,7 +109,7 @@
             <div class="col-lg-12">
                 <div class="ms_copyright">
                     <div class="footer_border"></div>
-                    <p>Copyright &copy; 2020 - 2021 <a href="#">Sultan of Art</a>. All Rights Reserved.</p>
+                    <p>Copyright &copy; 2020 - 2021 <a href="http://www.tfsbs.com/">TFSBS</a>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -248,6 +253,18 @@
                                     <div class="form-group">
                                             <input type="submit" class="ms_btn ms_btn_custom" value="Register Now">
                                     </div>
+
+                                    <div class="popup" id="popup-1">
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                    <div class="close-btn" onclick="togglePopup()">×</div>
+                                    <h1>Title</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+                                    </div>
+                                    </div>
+ 
+<button onclick="togglePopup()">Show Popup</button>
+                                    <p> Terms and Conditions</p>
                                     <p>Already Have An Account? <a href="#myModal1" data-toggle="modal" class="ms_modal hideCurrentModel">login here</a></p>
                             </div>
                         {!! Form::close() !!}
@@ -549,6 +566,33 @@
           </div>
         </div>
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <!-- <span aria-hidden="true">&times;</span>&times; -->
+         <i style="font-size:10em;" class="fa fa-close"></i>
+        </button>
+        <!-- <i class="close fa fa-close" data-dismiss="modal" aria-label="Close"><i> -->
+      </div>
+      <a href="#"class="modal-body">
+        <img src="/storage/media/media_source/popup.jpeg" style="width:100%;box-shadow:0px 0px 24px 6px rgb(4 4 4 / 20%);border-radius:1em;" />
+      </a><br/>
+      <div class="modal-footer"> 
+      <a href="javascript:;" class="ms_btn reg_btn" data-toggle="modal"
+                            data-target="#myModal" data-dismiss="modal"><span>Register</span></a>
+                            &nbsp;&nbsp;
+      <a href="javascript:;" class="ms_btn login_btn" data-toggle="modal"
+                            data-target="#myModal1" data-dismiss="modal"><span>Login</span></a>               
+      </div>
+    </div> 
+  </div>
+</div>
+
+<!--Modal-->
 
     <!--Main js file Style-->
    <script type="text/javascript" src="{{ asset('admin/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
@@ -616,6 +660,70 @@
         form.submit();
         });
     </script>
+    <script>
+    var myVideo = document.getElementById("video1");
+    var play = document.getElementById("play");
+    var pause = document.getElementById("pause");
+    var mute = document.getElementById("mute");
+    var unmute = document.getElementById("unmute");
+    function play_pause() {
+        if (myVideo.paused) {
+            myVideo.play();
+            // btn.innerHTML = "Pause";
+            play.style.display = "none";
+            pause.style.display = "block";
+        } else {
+            myVideo.pause();
+            play.style.display = "block";
+            pause.style.display = "none";
+        }
+    }
+    function muteUnmute() {
+        if (myVideo.muted == true) {
+            myVideo.muted = false;
+            mute.style.display = "block";
+            unmute.style.display = "none";
+        } else {
+            myVideo.muted = true;
+            mute.style.display = "none";
+            unmute.style.display = "block";
+        }
+    }
+</script>
+<script>
+    var myVideo = document.getElementById("video1");
+    var play = document.getElementById("play");
+    var pause = document.getElementById("pause");
+    var mute = document.getElementById("mute");
+    var unmute = document.getElementById("unmute");
+    function play_pause() {
+        if (myVideo.paused) {
+            myVideo.play();
+            // btn.innerHTML = "Pause";
+            play.style.display = "none";
+            pause.style.display = "block";
+        } else {
+            myVideo.pause();
+            play.style.display = "block";
+            pause.style.display = "none";
+        }
+    }
+    function muteUnmute() {
+        if (myVideo.muted == true) {
+            myVideo.muted = false;
+            mute.style.display = "block";
+            unmute.style.display = "none";
+        } else {
+            myVideo.muted = true;
+            mute.style.display = "none";
+            unmute.style.display = "block";
+        }
+    }
+</script>
+
+
+
+</html>
 
 </body>
 

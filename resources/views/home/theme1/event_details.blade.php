@@ -123,13 +123,13 @@
                                          <label>Search Key *</label>
                                          <input type="text" placeholder="Enter search key" name="search_keys" class="form-control" required>
                                      </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>Select Privacy *</label>
                                         <select class="form-control" name="visibility" required>
                                             <option value="">Select Privacy</option>
                                             <option value="public">Post to Public</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                          <label>Upload Thumbnails *</label>
                                          <input type="file" name="media_thumbnail" class="form-control" required>
